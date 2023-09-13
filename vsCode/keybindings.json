@@ -1,0 +1,25 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "shift+alt+oem_102",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "alt+oem_102",
+    "command": "editor.debug.action.selectionToWatch"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-redo"
+  }
+]
