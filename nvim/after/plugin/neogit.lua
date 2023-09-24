@@ -1,5 +1,5 @@
 local neogit = require('neogit')
 neogit.setup {}
 
-vim.keymap.set("n", "cc", ':Neogit commit<CR>')
+vim.keymap.set("n", "mm", ':Neogit commit<CR>')
 
