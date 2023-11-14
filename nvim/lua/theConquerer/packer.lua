@@ -11,7 +11,9 @@ return require('packer').startup(function(use)
     use {
         "nvim-telescope/telescope.nvim",
         tag = '0.1.2',
-        requires = { "nvim-lua/plenary.nvim" }
+        requires = {
+            "nvim-lua/plenary.nvim"
+        }
     }
 
     -- Colorschemes
@@ -43,7 +45,12 @@ return require('packer').startup(function(use)
     -- Git Plugin
     use "tpope/vim-fugitive"
     -- NeoGit
-    use "NeogitOrg/neogit"
+    use {
+        "NeogitOrg/neogit",
+        requires = {
+            "nvim-lua/plenary.nvim"
+        }
+    }
 
     -- LSP and Autocompletion
     use {
@@ -101,7 +108,35 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- Inbuild Terminal
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end }
+
+    -- Debugger
+    use { "rcarriga/nvim-dap-ui",
+        requires = {
+            "mfussenegger/nvim-dap"
+        },
+        config = function()
+            local dap = require("dap")
+            local dapui = require("dapui")
+            dapui.setup()
+            dap.listeners.after.event_initialized["dapui_config"] = function()
+                dapui.open()
+            end
+            dap.listeners.after.event_terminated["dapui_config"] = function()
+                dapui.close()
+            end
+            dap.listeners.after.event_exited["dapui_config"] = function()
+                dapui.close()
+            end
+        end
+    }
+    use { "jay-babu/mason-nvim-dap.nvim",
+        requires = {
+            "williamboman/mason.nvim",
+            "mfussenegger/nvim-dap",
+        }
+    }
 end)

@@ -46,13 +46,18 @@ sudo apt install -y g++
 # Font-Manager
 sudo apt install -y font-manager
 
+# Python3 Virtual Envionment
+sudo apt-get install python3-venv
+
+# Ripgrep for searching (fo e.g. nvim-telescop search)
+sudo pat install ripgrep
+
 # SUBLIME TEXT
 sudo apt install -y gnupg apt-transport-https ca-certificates software-properties-common
 curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 sudo apt update
 sudo apt install -y sublime-text
-
 
 # VS Code
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -62,7 +67,6 @@ rm -f packages.microsoft.gpg
 sudo apt install -y apt-transport-https
 sudo apt update
 sudo apt install -y code
-
 
 # NEOVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -77,6 +81,7 @@ sudo apt insatll -y vim
 
 # Update sudoedit to vim
 sudo update-alternatives --config editor
+
 
 
 echo git clone "https://github.com/he-d/dotConfigs.git"  to 

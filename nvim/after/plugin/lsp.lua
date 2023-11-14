@@ -1,4 +1,8 @@
-local lsp = require("lsp-zero")
+-- Load lsp with a protected call
+local status_ok, lsp = pcall(require, "lsp-zero")
+if not status_ok then
+    return
+end
 
 lsp.preset("recommended")
 
@@ -6,9 +10,6 @@ lsp.ensure_installed({
 	'rust_analyzer'
 })
 
--- Fix Undefined global 'vim'
---lua-language-server
---lsp.configure('sumneko_lua', {
 lsp.configure('lua-language-server', {
     settings = {
         Lua = {
