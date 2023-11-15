@@ -1,15 +1,15 @@
 -- Load autopairs with a protected call
 local status_ok, npairs = pcall(require, "nvim-autopairs")
-if not status_ok then 
+if not status_ok then
     return
 end
 
 npairs.setup {
     check_ts = true,
     ts_config = {
-        lua = { "string", "source" },
-        javascript  = { "string", "source" },
-        java = false,
+        lua        = { "string", "source" },
+        javascript = { "string", "source" },
+        java       = false,
     },
     disable_filetype = { "TelescopePrompt", "spectre_panel" },
     fast_wrap = {
@@ -32,4 +32,3 @@ if not cmp_status_ok then
 end
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
-

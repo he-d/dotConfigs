@@ -3,6 +3,11 @@ if not status_ok then
     return
 end
 
+vim.keymap.set("n", "<leader>e", vim.cmd.NeoTreeShowToggle)
+-- Focus on current file in NeoTree
+vim.keymap.set("n", "<leader>er", ':Neotree reveal<CR>')
+
+--[[
 neotree.setup({
 
     popup_border_style = "rounded",
@@ -68,5 +73,4 @@ neotree.setup({
     --                                           -- instead of relying on nvim autocmd events.
 
 })
-
-vim.keymap.set("n", "<leader>e", vim.cmd.NeoTreeRevealToggle)
+--]]
