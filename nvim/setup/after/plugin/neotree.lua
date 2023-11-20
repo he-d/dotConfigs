@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>e", vim.cmd.NeoTreeShowToggle)
 -- Focus on current file in NeoTree
 vim.keymap.set("n", "<leader>er", ':Neotree reveal<CR>')
 
+-- Disable setup to prevent start on starting neovim
 --[[
 neotree.setup({
 
