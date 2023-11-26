@@ -139,4 +139,7 @@ return require('packer').startup(function(use)
             "mfussenegger/nvim-dap",
         }
     }
+
+    -- Tmux Setup
+    use { "christoomey/vim-tmux-navigator" }
 end)
