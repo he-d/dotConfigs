@@ -25,6 +25,9 @@ set relativenumber
 
 set nobackup
 
-let mapleader = " "
+let mapleader=" "
+nnoremap <leader>pv :Ex<CR>
 
 set so=7
+
+set mouse=a
