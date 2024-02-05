@@ -1,34 +1,137 @@
 {
   "workbench.colorTheme": "Kanagawa",
   "workbench.iconTheme": "vscode-icons",
+  "telemetry.telemetryLevel": "off",
+  "workbench.startupEditor": "none",
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1500,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
-  "vscode-neovim.useCtrlKeysForNormalMode": true,
-  "vscode-neovim.useCtrlKeysForInsertMode": true,
-  "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
-  },
-  "C_Cpp.default.cppStandard": "c++17",
-  "C_Cpp.default.cStandard": "c17",
-  "security.workspace.trust.untrustedFiles": "open",
+  "files.autoSaveDelay": 1000,
   "editor.rulers": [
     {
       "column": 80,
-      "color": "#9f7e8a50"
+      "color": "#CC783250"
     },
     {
       "column": 100,
-      "color": "#9f7e8a90"
+      "color": "#CC783290"
     },
     {
       "column": 120,
-      "color": "#9f7e8a"
+      "color": "#CC7832"
     }
+  ],
+  "files.associations": {
+    "*.yml": "azure-pipelines"
+  },
+  "editor.accessibilitySupport": "auto",
+  "editor.formatOnSaveMode": "file",
+  "editor.inlineSuggest.enabled": true,
+  "editor.codeLens": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 10,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.autoReveal": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.codeLens": false,
+  "diffEditor.maxComputationTime": 0,
+  "diffEditor.renderIndicators": true,
+  "diffEditor.renderMarginRevertIcon": true,
+  "diffEditor.renderSideBySide": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "fixme",
+    "TODO",
+    "[ ]",
+    "[x]",
+    "fixProject"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "icon": "bug"
+    },
+    "HACK": {
+      "icon": "tools"
+    },
+    "FIXME": {
+      "icon": "flame"
+    },
+    "fixme": {
+      "icon": "flame",
+      "iconColour": "#ff0000",
+      "background": "#111111"
+    },
+    "delta": {
+      "icon": "$(triangle-up)",
+      "background": "#212122"
+    },
+    "fixProject": {
+      "icon": "$(beaker-stop)",
+      "background": "#212122"
+    }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorCustomizations": {
+    "editorBracketMatch.background": "#cc77328c",
+    "glassit.alpha": 240
+  },
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "origin",
+      "color": "#3398ff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+    {
+      "tag": "fixCloud",
+      "color": "#00ff00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+    {
+      "tag": "fixme",
+      "color": "#ff0000",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    }
+  ],
+  "editor.snippetSuggestions": "bottom",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "markdown-pdf.outputDirectoryRelativePathFile": true,
+  "markdown-pdf.breaks": true,
+  "markdown-pdf.executablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "editor.formatOnSave": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "info"
   ]
 }

@@ -1,17 +1,129 @@
 // Place your key bindings in this file to override the defaultsauto[]
-[
+// NEEDS REVISION !!!!! 
   {
-    "key": "shift+alt+oem_102",
-    "command": "workbench.action.closeOtherEditors"
+    "key": "ctrl+shift+oem_2",
+    "command": "git.push"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "git.deleteBranch"
   },
   {
     "key": "alt+oem_102",
     "command": "editor.debug.action.selectionToWatch"
   },
   {
-    "key": "ctrl+y",
-    "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
+    "key": "shift+alt+oem_102",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "shift+alt+7",
+    "command": "workbench.action.closeEditorsToTheLeft"
+  },
+  {
+    "key": "shift+alt+8",
+    "command": "workbench.action.closeEditorsToTheRight"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "-bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+a",
+    "command": "git.stashApply"
+  },
+  {
+    "key": "alt+f1",
+    "command": "-editor.action.showAccessibilityHelp"
+  },
+  {
+    "key": "alt+f3",
+    "command": "-editor.action.dirtydiff.next",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+f alt+1",
+    "command": "editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+1",
+    "command": "-editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+f alt+2",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+2",
+    "command": "-editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+f3",
+    "command": "innonav-dev-tools.functions.refreshSymbols"
+  },
+  {
+    "key": "alt+f10",
+    "command": "al.fullDependencyPublish"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "markdown-preview-enhanced.openPreviewToTheSide",
+    "when": "editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown-preview-enhanced.openPreviewToTheSide",
+    "when": "editorLangId == 'markdown'"
   },
   {
     "key": "ctrl+shift+k",
@@ -20,6 +132,61 @@
   },
   {
     "key": "ctrl+y",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+y",
     "command": "-redo"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "git-graph.view"
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.files.saveWithoutFormatting"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+s",
+    "command": "-workbench.action.files.saveWithoutFormatting"
+  },
+  {
+    "key": "ctrl+k ctrl+v",
+    "command": "markdown-preview-enhanced.openPreview",
+    "when": "editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown-preview-enhanced.openPreview",
+    "when": "editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+e ctrl+r",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "ctrl+e ctrl+x",
+    "command": "extension.markdown-pdf.pdf"
+  },
+  {
+    "key": "ctrl+m ctrl+d",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "alt+f alt+3",
+    "command": "editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+3",
+    "command": "-editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]
