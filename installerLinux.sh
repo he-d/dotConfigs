@@ -7,6 +7,9 @@ sudo apt upgrade && sudo apt upgrade -y
 # GIT
 sudo apt install -y git
 
+# PASS - for git credential-manager
+sudo apt install -y pass
+
 # CURL
 sudo apt install -y curl
 
