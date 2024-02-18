@@ -77,6 +77,9 @@ new plugin
 `<leader> + u` Toggle UndoTree <br>
 <br>  
 
+### Colorizer
+`<leader> + 0` Toggle Colorize <br>
+
 ### Codeium
 `<leader> + ps` Grep string <br>
 <br>  

@@ -1,12 +1,12 @@
 $userName = $env:USERNAME
 $userDocumentsFolderPath = "C:\Users\$userName\Documents\"
 
-$userDocumentsFolderPath
 
 # Install Winget manuelly via GitHub or via Microsoft Store
 explorer "https://github.com/microsoft/winget-cli"
 
-
+#TODO - still working on it 
+<#
 $ProgrammsToinstall = @()
 $ProgrammsToinstall += "Git.Git"
 $ProgrammsToinstall += "Neovim.Neovim"
@@ -19,4 +19,4 @@ foreach($programm in $ProgrammsToinstall) {
     winget $wingetCommand
 }
 
-
+#>
