@@ -22,6 +22,9 @@ sudo apt install -y wget
 # GPG
 sudo apt install -y gpg
 
+# 7-ZIP
+sudo apt install -y p7zip-full
+
 # FOR VM ONLY
 sudo apt install -y open-vm-tools open-vm-tools-desktop
 
@@ -132,6 +135,9 @@ sudo update-alternatives --config editor
 # Start configuration
 echo "Finished installing programms, starting the 'theConquerer' setup"
 
+if [ -d ~/Desktop/cqConfig/ ]; then 
+    rm -rf  ~/Desktop/cqConfig/
+fi
 mkdir -p ~/Desktop/cqConfig/
 cd ~/Desktop/cqConfig/
 wget https://github.com/he-d/dotConfigs/archive/refs/heads/main.zip
@@ -141,32 +147,56 @@ rm main.zip
 
 cd dotConfigs-main/
 
+
 echo "Copying vim configuration"
 cp -f vim/.vimrc ~/.vimrc
 
+
 echo "Copying nvim configuration"
+if [ -d ~/.config/nvim/ ]; then 
+    rm -rf  ~/.config/nvim/
+fi
 mkdir ~/.config/nvim
 cp -rf nvim/setup/after/ ~/.config/nvim/
 cp -rf nvim/setup/lua/ ~/.config/nvim/
 cp -f nvim/setup/init.lua ~/.config/nvim/
 
-echo "Copying nvim configuration"
-cp tmux/.tmux.conf ~/.tmux.conf
+
+echo "Copying tmux configuration"
+cp -f tmux/.tmux.conf ~/.tmux.conf
+
 
 echo "Copying awesome configuration"
+if [ -d ~/.config/awesome/ ]; then 
+    rm -rf  ~/.config/awesome/
+fi
 mkdir ~/.config/awesome
-cp -f awesome/rc.lua ~/.config/awesome/rc.lua
+cp -f awesome/rc.lua ~/.config/awesome/
+
 
 echo "Copying zsh configuration"
 cp -f zsh/theConquerer.zsh-theme ~/.oh-my-zsh/themes/
 cp -f zsh/.zshrc ~/.zshrc
 
-echo "Copying nvim configuration"
+
+echo "Copying kitty configuration"
+if [ -d ~/.config/kitty/ ]; then
+    rm -rf ~/.config/kitty/
+fi
 mkdir ~/.config/kitty
 cp -f kitty/kitty.conf ~/.config/kitty/
 
 
+echo "Copying VS Code configuration"
+if [ ! -d ~/.config/Code/User/ ]; then 
+    mkdir -p ~/.config/Code/User/
+fi
+cp -f code/keybindings.json ~/.config/Code/User/
+cp -f code/settings.json ~/.config/Code/User/
 
+
+
+# Configuratinon finished - cleaning everything up
 rm -rf ~/Desktop/cqConfig/
 
 echo "To complete the configuration reboot the system!"
