@@ -65,6 +65,7 @@ sudo apt install -y font-manager
 
 # Python3 Virtual Envionment
 sudo apt install -y python3-venv
+sudo apt install -y python3.12-venv
 
 # RIPGREP - for searching (fo e.g. nvim-telescop search)
 sudo apt install -y ripgrep
