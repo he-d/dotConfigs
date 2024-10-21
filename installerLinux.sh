@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# =============== Downlaod Section===============
+#================ Downloading programms ================
 # Update System
 sudo apt upgrade && sudo apt upgrade -y
 
@@ -65,10 +65,13 @@ sudo apt install -y font-manager
 
 # Python3 Virtual Envionment
 sudo apt install -y python3-venv
-sudo apt install -y python3.12-venv
+sudo apt install -y python3.13-venv
 
 # RIPGREP - for searching (fo e.g. nvim-telescop search)
 sudo apt install -y ripgrep
+
+# Clipboarding tool
+sudo apt install -y xclip 
 
 #Java
 sudo apt install -y openjdk-11-jre
@@ -93,12 +96,9 @@ sudo apt update
 sudo apt install -y code
 
 # NEOVIM
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage --appimage-extract
-./squashfs-root/AppRun --version
-sudo mv squashfs-root /
-sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
 
 #Packer for NEOVIM
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -133,7 +133,7 @@ sudo update-alternatives --config x-terminal-emulator
 sudo update-alternatives --config editor
 
 
-# Start configuration
+# ================ Start configuration ================
 echo "Finished installing programms, starting the 'theConquerer' setup"
 
 if [ -d ~/Desktop/cqConfig/ ]; then 
@@ -148,7 +148,6 @@ rm main.zip
 
 cd dotConfigs-main/
 
-
 echo "Copying vim configuration"
 cp -f vim/.vimrc ~/.vimrc
 
@@ -162,10 +161,8 @@ cp -rf nvim/setup/after/ ~/.config/nvim/
 cp -rf nvim/setup/lua/ ~/.config/nvim/
 cp -f nvim/setup/init.lua ~/.config/nvim/
 
-
 echo "Copying tmux configuration"
 cp -f tmux/.tmux.conf ~/.tmux.conf
-
 
 echo "Copying awesome configuration"
 if [ -d ~/.config/awesome/ ]; then 
@@ -174,11 +171,9 @@ fi
 mkdir ~/.config/awesome
 cp -f awesome/rc.lua ~/.config/awesome/
 
-
 echo "Copying zsh configuration"
 cp -f zsh/theConquerer.zsh-theme ~/.oh-my-zsh/themes/
 cp -f zsh/.zshrc ~/.zshrc
-
 
 echo "Copying kitty configuration"
 if [ -d ~/.config/kitty/ ]; then
@@ -186,7 +181,6 @@ if [ -d ~/.config/kitty/ ]; then
 fi
 mkdir ~/.config/kitty
 cp -f kitty/kitty.conf ~/.config/kitty/
-
 
 echo "Copying VS Code configuration"
 if [ ! -d ~/.config/Code/User/ ]; then 
