@@ -1,0 +1,103 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#1F1F28",
+          "foreground": "#7AA89F",
+          "powerline_symbol": "\ue0b4",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "foreground": "#DAA55A",
+          "style": "plain",
+          "template": "{{ .UserName }}'s ",
+          "type": "session"
+        },
+        {
+          "background": "#1F1F28",
+          "foreground": "#76946A",
+          "properties": {
+            "folder_icon": "..\ue5fe..",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          },
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "template": " {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#957FB8",
+          "properties": {
+            "fetch_status": true
+          },
+          "style": "plain",
+          "template": "<#E6C384>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#98BB6C",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#E6C384>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#98BB6C",
+          "style": "diamond",
+          "template": "RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#7E9CD8",
+          "style": "plain",
+          "template": "\u250b {{ .CurrentDate | date .Format }}",
+          "type": "time",
+          "properties": {
+            "format": "15:04:05"
+          }
+        },
+        {
+          "foreground": "#7E9CD8",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " \u250b {{ .FormattedMs }} ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#E6C384",
+          "style": "plain",
+          "template": "\u2b9e ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
